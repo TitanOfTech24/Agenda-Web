@@ -4,7 +4,7 @@ const turnos = [
   { fecha: "2025-06-21", hora: "12:00", ocupado: false }
 ];
 
-const formsBaseURL = const formsBaseURL = "https://forms.office.com/Pages/ResponsePage.aspx?id=yDY_H864YEK7LIsSHgEyqhFzcy0O6J5Dsxa0oIPDhi1UMzAwUUM5UTUwM1ZRQUtKSVJCNzUyMTI1SS4u"; // Reemplazar con tu URL real
+const formsBaseURL = "https://forms.office.com/Pages/ResponsePage.aspx?id=yDY_H864YEK7LIsSHgEyqhFzcy0O6J5Dsxa0oIPDhi1UMzAwUUM5UTUwM1ZRQUtKSVJCNzUyMTI1SS4u"; // Reemplazar con tu URL real
 
 const tabla = document.getElementById("tabla-turnos");
 
