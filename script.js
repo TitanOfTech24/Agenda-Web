@@ -6,7 +6,7 @@ const formulario = document.getElementById("formulario");
 
 let turnoSeleccionado = null;
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbyoIB1TGu9Hyl4QCKLPNIGTkseRR0J0vUCU_BTVZzgcqPHL2VUv4ZWHIZQ7Z0I4_3qT5w/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyd5tC-iLqH2e3mF5KI0cMXhnDsT41-RUTf2MatW2DibnE1o-HuU3NCuG-nUC7cZei2pA/exec";
 
 inputFecha.addEventListener("change", async () => {
   const fecha = inputFecha.value;
