@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agenda - Santiago Sierra</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Santiago Sierra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Agenda de Turnos - Santiago Sierra</h1>
-  
-  <label for="fecha">Seleccioná una fecha:</label>
-  <input type="date" id="fecha" />
-
-  <table id="tabla-turnos">
-    <thead>
-      <tr>
-        <th>Hora</th>
-        <th>Acción</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="cerrar-modal" class="close">&times;</span>
-      <h3>Confirmar Turno</h3>
-      <form id="formulario">
-        <input type="text" id="nombre" placeholder="Tu nombre" required />
-        <input type="tel" id="telefono" placeholder="Tu teléfon
+  <div class="container">
+    <h1>Reservá tu turno con Santiago Sierra</h1>
+    <label for="fecha">Seleccioná una fecha:</label>
+    <input type="date" id="fecha" name="fecha">
+    <table id="tabla-turnos">
+      <thead>
+        <tr><th>Hora</th><th>Reservar</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
