@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reserva de Turnos</title>
+  <title>Agenda Santiago Sierra</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Agenda - Reserva de Turnos</h1>
-  <table id="tabla-turnos">
-    <tr>
-      <th>Fecha</th>
-      <th>Hora</th>
-      <th>Estado</th>
-    </tr>
-  </table>
+  <div class="container">
+    <h1>Reservá tu turno con Santiago Sierra</h1>
+    <label for="fecha">Seleccioná una fecha:</label>
+    <input type="date" id="fecha" name="fecha">
+    <table id="tabla-turnos">
+      <thead>
+        <tr><th>Hora</th><th>Reservar</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
