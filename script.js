@@ -14,10 +14,7 @@ document.getElementById("fecha").addEventListener("change", async function () {
   }
 
   turnos.forEach(t => {
-    const horaFormateada = new Date(`1970-01-01T${t.hora}`).toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+   const horaFormateada = t.hora.slice(0,5); // toma solo "HH:MM"
 
     const div = document.createElement("div");
     div.className = "turno";
