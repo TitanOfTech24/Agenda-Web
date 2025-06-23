@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f0f4f8;
   margin: 0;
   padding: 0;
 }
@@ -11,36 +11,79 @@ body {
   background: white;
   padding: 20px;
   margin-top: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #0056b3;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
-th, td {
+th {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  border-radius: 6px 6px 0 0;
+}
+
+td {
   padding: 10px;
-  border-bottom: 1px solid #ccc;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 button {
-  padding: 6px 12px;
+  padding: 8px 16px;
   background-color: #007BFF;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+  }
 }
