@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycby07CrRp4pWgGtnHWlQvfCM8pm-ctcCFw5bKubOLMM3UkWnPMCSRGCxEUXrZUKhYREO2A/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzoC_s10DZrLK_ay0GgycPjw3Tz7X2PCW3oBQWvRYb8J27VK9Tz8fF6t16Q3bempfOr0Q/exec";
 
 document.getElementById("fecha").addEventListener("change", async function () {
   const fecha = this.value;
