@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbw8QghzmmCmkj_HwFOv-wxvq35x1Tc0cZIuTUVgOIAItqIsEVfDQWE2Que9Paz-CAgN/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbx7ysWmicRRIawSwz8omMqPZ_tGYtEQCdD3Bsm7zyjBervatUMROPpnc3y46MQgCdp2mg/exec";
 
 document.getElementById("fecha").addEventListener("change", async function () {
   const fecha = this.value;
@@ -14,12 +14,10 @@ document.getElementById("fecha").addEventListener("change", async function () {
   }
 
   turnos.forEach(t => {
-    const horaFormateada = t.hora.toString().substring(0,5); // Formato HH:MM
-
     const fila = document.createElement("tr");
     fila.innerHTML = `
-      <td>${horaFormateada}</td>
-      <td><button onclick="reservarTurno('${t.fecha}', '${horaFormateada}')">Reservar</button></td>
+      <td>${t.hora}</td>
+      <td><button onclick="reservarTurno('${t.fecha}', '${t.hora}')">Reservar</button></td>
     `;
     tabla.appendChild(fila);
   });
@@ -28,23 +26,13 @@ document.getElementById("fecha").addEventListener("change", async function () {
 async function reservarTurno(fecha, hora) {
   const nombre = prompt("Ingresá tu nombre completo:");
   const telefono = prompt("Ingresá tu número de celular (con código de país):");
-  const tipoConsulta = prompt("Tipo de consulta:\n1 - Evaluación Inicial\n2 - Sesión de tratamiento");
-
-  let tipo;
-  if (tipoConsulta === "1") tipo = "Evaluación Inicial";
-  else if (tipoConsulta === "2") tipo = "Sesión de tratamiento";
-  else {
-    alert("Selección inválida. Intente nuevamente.");
-    return;
-  }
 
   if (!nombre || !telefono) {
     alert("Todos los campos son obligatorios.");
     return;
   }
 
-  const params = new URLSearchParams({ fecha, hora, nombre, telefono, tipo });
-
+  const params = new URLSearchParams({ fecha, hora, nombre, telefono });
   const response = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -54,7 +42,7 @@ async function reservarTurno(fecha, hora) {
   const resultado = await response.text();
   alert(resultado);
 
-  const mensaje = `Hola ${nombre}, confirmamos tu ${tipo} para el ${fecha} a las ${hora} con Santiago Sierra.`;
+  const mensaje = `Hola ${nombre}, confirmamos tu turno para el ${fecha} a las ${hora} con Santiago Sierra.`;
   const whatsappURL = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(whatsappURL, "_blank");
 }
