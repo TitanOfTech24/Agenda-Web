@@ -2,27 +2,26 @@ const API_URL = "https://script.google.com/macros/s/AKfycby07CrRp4pWgGtnHWlQvfCM
 
 document.getElementById("fecha").addEventListener("change", async function () {
   const fecha = this.value;
-  const contenedor = document.getElementById("lista-turnos");
-  contenedor.innerHTML = "";
+  const tabla = document.querySelector("#tabla-turnos tbody");
+  tabla.innerHTML = "";
 
   const response = await fetch(`${API_URL}?fecha=${fecha}`);
   const turnos = await response.json();
 
   if (turnos.length === 0) {
-    contenedor.innerHTML = "<p>No hay turnos disponibles para esta fecha.</p>";
+    tabla.innerHTML = "<tr><td colspan='2'>No hay turnos disponibles para esta fecha.</td></tr>";
     return;
   }
 
   turnos.forEach(t => {
-   const horaFormateada = t.hora.slice(0,5); // toma solo "HH:MM"
+    const horaFormateada = t.hora.toString().substring(0,5); // Formato HH:MM
 
-    const div = document.createElement("div");
-    div.className = "turno";
-    div.innerHTML = `
-      <span>${horaFormateada}</span>
-      <button onclick="reservarTurno('${t.fecha}', '${t.hora}')">Reservar</button>
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${horaFormateada}</td>
+      <td><button onclick="reservarTurno('${t.fecha}', '${horaFormateada}')">Reservar</button></td>
     `;
-    contenedor.appendChild(div);
+    tabla.appendChild(fila);
   });
 });
 
