@@ -18,23 +18,30 @@ body {
 h1 {
   text-align: center;
   color: #0056b3;
-  font-size: 24px;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.selector-fecha {
   margin-bottom: 20px;
 }
 
-label {
+.selector-fecha label {
   display: block;
-  margin-bottom: 10px;
   font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
 }
 
-input[type="date"],
-select {
+input[type="date"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 14px 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  cursor: pointer;
 }
 
 table {
@@ -45,23 +52,26 @@ table {
 th {
   background-color: #007BFF;
   color: white;
-  padding: 12px;
+  padding: 14px;
   border-radius: 6px 6px 0 0;
+  font-size: 16px;
 }
 
 td {
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   background-color: #f9f9f9;
+  font-size: 15px;
 }
 
 button {
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: #007BFF;
   border: none;
   border-radius: 6px;
   color: white;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -75,7 +85,12 @@ button:hover {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  input[type="date"] {
+    font-size: 16px;
+    padding: 12px;
   }
 
   table, th, td {
@@ -84,6 +99,7 @@ button:hover {
 
   button {
     width: 100%;
+    font-size: 14px;
     margin-top: 8px;
   }
 }
