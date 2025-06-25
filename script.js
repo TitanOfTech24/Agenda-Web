@@ -25,7 +25,7 @@ document.getElementById("fecha").addEventListener("change", async function () {
 
 async function reservarTurno(fecha, hora) {
   const nombre = prompt("Ingresá tu nombre completo:");
-  const telefono = prompt("Ingresá tu número de celular (con código de país):");
+  const telefono = prompt("Ingresá tu número de celular Ej:(099 123 123):");
 
   const tipoConsulta = prompt("Seleccioná tipo de consulta:\n1. Evaluación Inicial\n2. Sesión de tratamiento");
   let tipoTexto = "";
@@ -53,7 +53,7 @@ async function reservarTurno(fecha, hora) {
   const resultado = await response.text();
   alert(resultado);
 
-  const mensaje = `Hola ${nombre}, confirmamos tu ${tipoTexto} el ${fecha} a las ${hora} con Santiago Sierra.`;
+  /*const mensaje = `Hola ${nombre}, confirmamos tu ${tipoTexto} el ${fecha} a las ${hora} con Santiago Sierra.`;
   const whatsappURL = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(whatsappURL, "_blank");
+  window.open(whatsappURL, "_blank");*/
 }
