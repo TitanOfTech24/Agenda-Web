@@ -64,7 +64,7 @@ async function reservarTurno(fecha, hora) {
     });
 
     const resultado = await response.text();
-    alert(resultado);
+    alert("Gracias, su turno fue pre cargado, será notificado por WhatsApp una vez sea confirmado.");
 
     // Ya no redirigimos a WhatsApp porque ahora el mensaje se genera desde Google Sheets
   } catch (error) {
