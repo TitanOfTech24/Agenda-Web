@@ -33,7 +33,7 @@ async function reservarTurno(fecha, hora) {
   const nombre = prompt("Ingresá tu nombre completo:");
   const telefono = prompt("Ingresá tu número de celular. Ej: 099123123");
 
-  const tipoConsulta = prompt("Seleccioná tipo de consulta:\n1. Evaluación Inicial\n2. Sesión de tratamiento");
+  const tipoConsulta = prompt("Seleccioná tipo de consulta: \n Presione 1 para Evaluación Inicial \n Presione 2 para Sesión de tratamiento");
   let tipoTexto = "";
 
   if (tipoConsulta === "1") tipoTexto = "Evaluación Inicial";
